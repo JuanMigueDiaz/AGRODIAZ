@@ -13,11 +13,24 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('admin/', function () {
+    return view('admin.auth.login');
+});
+
+Route::get('admin/dashboard', function () {
+    return view('admin.dashboard');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
+
+/*
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,3 +42,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+*/
